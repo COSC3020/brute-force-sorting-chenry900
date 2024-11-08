@@ -20,3 +20,7 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+The best case run time would be nlogn with the worse case being nlog n as well.
+The run time wouldn't change if you generated them randomly without memory 
+because the system used is quicksort so worst and best case run at about the same time.
