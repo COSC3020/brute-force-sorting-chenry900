@@ -17,7 +17,7 @@ function sort(array, low, high, perm) {
     array[low] = array[p];
     array[p] = swap;
     perm = perm + 1;
-    sort(array, lo, p-1, perm);
-    sort(array, p+1, hi, perm);
+    perm = perm + sort(array, lo, p-1, perm);
+    perm = perm + sort(array, p+1, hi, perm);
     return perm;
 }
