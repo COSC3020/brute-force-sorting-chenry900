@@ -1,11 +1,11 @@
 function permutationSort(a) {
-    var perm = 0;
+    perm = 0;
     perm = sort(a, 0, a.length -1);
     return perm;
 }
 
 function sort(array, low, high, perm) {
-    var iter, pivot, perm = 0;
+    perm = 0;
     if (lo >= hi) return;
     p = lo;
     for (i = lo +1; i <= hi; i++)
