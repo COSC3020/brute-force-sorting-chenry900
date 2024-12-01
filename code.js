@@ -1,23 +1,27 @@
 function permutationSort(a) {
-    perm = 0;
-    perm = sort(a, 0, a.length -1);
+    var perm = 0;
+    perm = sort(a, 0, a.length -1,perm);
     return perm;
 }
 
 function sort(array, low, high, perm) {
-    perm = 0;
-    if (lo >= hi) return;
-    p = lo;
-    for (i = lo +1; i <= hi; i++)
-        if (array[iter] < array[lo])
-            var swap = array[++p];
+    if (low >= high) 
+        return perm;
+    var p = low;
+    for (var i = low +1; i <= high; i++) {
+        if (array[i] < array[low]) {
+            p++;
+            var swap = array[p];
             array[p] = array[i];
             array[i] = swap;
-    swap = array[low];
+            perm++;
+        }
+    }
+    var swap = array[low];
     array[low] = array[p];
     array[p] = swap;
     perm = perm + 1;
-    perm = perm + sort(array, lo, p-1, perm);
-    perm = perm + sort(array, p+1, hi, perm);
+    perm = sort(array, low, p-1, perm);
+    perm = sort(array, p+1, high, perm);
     return perm;
 }
